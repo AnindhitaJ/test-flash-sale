@@ -1,0 +1,422 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wireframe – Atur Flash Sale (Admin)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+:root{color-scheme:light dark;--bg:#F2F4F8;--sf:#fff;--tx:#161C2D;--mu:#5A6478;--bd:#E1E5EC;--bd2:#EDF0F5;--bd3:#C7CEDA;--bbg:#E8EDFF;--btx:#2A44B5;--pr:#D63A08;--on:#fff;--gbg:#E3F5EC;--gtx:#0B6B42;--ybg:#FFF1D1;--ytx:#7C4F00;--rbg:#FDE6E3;--rtx:#B0261B;--nbg:#ECEFF4;--ntx:#3F4A5E;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1320;--sf:#171E30;--tx:#E9ECF4;--mu:#A0A9BC;--bd:#2A3248;--bd2:#222A3E;--bd3:#3A4460;--bbg:#1D2A5A;--btx:#B3C5FF;--pr:#FF6B3D;--on:#1F0A02;--gbg:#10301F;--gtx:#8BDDAE;--ybg:#3A2C08;--ytx:#F4C86A;--rbg:#40191A;--rtx:#FFA39B;--nbg:#252D42;--ntx:#C6CCDA}}
+:root[data-theme="dark"]{--bg:#0E1320;--sf:#171E30;--tx:#E9ECF4;--mu:#A0A9BC;--bd:#2A3248;--bd2:#222A3E;--bd3:#3A4460;--bbg:#1D2A5A;--btx:#B3C5FF;--pr:#FF6B3D;--on:#1F0A02;--gbg:#10301F;--gtx:#8BDDAE;--ybg:#3A2C08;--ytx:#F4C86A;--rbg:#40191A;--rtx:#FFA39B;--nbg:#252D42;--ntx:#C6CCDA}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg)}
+.top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 16px;background:var(--sf);border-bottom:1px solid var(--bd)}
+.top button{border:1px solid var(--bd3);background:var(--sf);color:var(--tx);border-radius:99px;padding:10px 14px;font:600 13px Inter,Arial,sans-serif;min-height:44px;cursor:pointer}
+.top button[aria-current="true"]{background:var(--pr);color:var(--on);border-color:var(--pr)}
+.top span{font:12px Inter,Arial,sans-serif;color:var(--mu);margin-left:auto}
+.scr{display:none;overflow-x:auto}.scr.on{display:block}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--tx);font-size:14px}
+*{box-sizing:border-box}
+.app{display:flex;width:1200px;background:var(--bg)}
+.sb{width:220px;background:var(--sf);border-right:1px solid var(--bd);padding:20px 16px}
+.sb b{display:block;font-size:16px;margin-bottom:20px}
+.sb p{margin:0 0 4px;padding:10px 12px;border-radius:8px;color:var(--mu)}
+.sb p.on{background:var(--bbg);color:var(--btx);font-weight:600}
+.mn{flex:1;padding:24px 28px}
+.row{display:flex;gap:12px;align-items:center}
+.sp{justify-content:space-between}
+h1{margin:0;font-size:22px}
+.sub{color:var(--mu);margin:4px 0 0}
+.btn{border:0;border-radius:8px;padding:10px 16px;font:600 14px Inter,Arial;background:var(--pr);color:var(--on);min-height:44px}
+.btn.s{background:var(--sf);color:var(--tx);border:1px solid var(--bd3)}
+.btn[disabled]{background:var(--bd3);color:var(--ntx)}
+.lk{background:none;border:0;color:var(--btx);font:600 14px Inter,Arial;padding:12px 6px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:16px}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:12px;color:var(--mu);padding:10px 8px;border-bottom:1px solid var(--bd)}
+td{padding:10px 8px;border-bottom:1px solid var(--bd2);vertical-align:middle}
+.bd{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:600}
+.g{background:var(--gbg);color:var(--gtx)}.y{background:var(--ybg);color:var(--ytx)}.r{background:var(--rbg);color:var(--rtx)}.n{background:var(--nbg);color:var(--ntx)}.b{background:var(--bbg);color:var(--btx)}
+.in{width:84px;height:40px;border:1px solid var(--bd3);border-radius:8px;padding:0 10px;font:14px Inter,Arial}
+.in.e{border-color:var(--rtx)}
+.mt{color:var(--mu);font-size:12px}
+.pic{width:36px;height:36px;border-radius:6px;background:var(--bd)}
+.lock{opacity:.5;pointer-events:none}body[data-role=staff] .only-lead,body[data-role=staff] .only-admin,body[data-role=lead] .only-admin,body[data-role=admin] .only-lead{display:none}body[data-role=admin] .scr input{pointer-events:none}
+:root{--f:'Plus Jakarta Sans',Inter,Arial,sans-serif}
+body *{font-family:var(--f)!important;font-variant-numeric:tabular-nums}
+body{line-height:1.45}
+h1{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.app{width:1280px}.mn{padding:28px 32px}
+.sb{width:232px;flex:none;background:#161C2D;border:0;padding:24px 14px}
+.sb b{display:flex;align-items:center;color:#fff;font-size:17px;font-weight:800;margin-bottom:24px}
+.sb b::before{content:"";width:18px;height:18px;margin-right:9px;background:#FF6B3D;clip-path:polygon(58% 0,12% 56%,44% 56%,34% 100%,88% 40%,56% 40%)}
+.sb p{color:#A8B1C6;font-weight:500;padding:11px 12px}
+.sb p.on{background:rgba(255,255,255,.1);color:#fff;font-weight:700}
+.card{border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.btn{border-radius:10px;font-weight:700;box-shadow:0 1px 2px rgba(16,24,40,.14);transition:filter .12s}
+.btn:hover:not([disabled]){filter:brightness(1.08)}
+.btn.s,.btn[disabled]{box-shadow:none}
+.lk:hover{text-decoration:underline}
+.in{border-radius:10px;height:42px;background:var(--sf);color:var(--tx)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--pr);outline-offset:2px}
+th{font-weight:600;padding:12px}td{padding:14px 12px}
+tr:last-child td{border-bottom:0}tr:hover td{background:var(--bd2)}
+.bd{padding:4px 10px 4px 9px;font-weight:600}
+.bd::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:1px}
+.pic{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#FFD9C7,#FFB894)}
+tr:nth-child(3n+2) .pic{background:linear-gradient(135deg,#D6E6FF,#A9C8FF)}tr:nth-child(3n) .pic{background:linear-gradient(135deg,#D4F2E2,#A6DFC2)}
+.top{background:var(--sf);padding:10px 20px}
+.top button[aria-current="true"],.rb button[aria-pressed="true"]{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+#rbinfo{background:var(--sf)!important;color:var(--mu)!important;border-bottom:1px solid var(--bd);font-size:13px!important}
+#daftar .row>.card{border-top:3px solid var(--bd)}
+#daftar .row>.card:has(.bd.g){border-top-color:var(--gtx)}#daftar .row>.card:has(.bd.y){border-top-color:var(--ytx)}#daftar .row>.card:has(.bd.r){border-top-color:var(--rtx)}
+#daftar .row>.card:first-child{background:#161C2D;color:#fff;border-color:#161C2D}
+#daftar .row>.card:first-child .mt{color:#A8B1C6}
+#daftar .row>.card:first-child b::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#FF6B3D;margin-right:8px;animation:lv 1.6s infinite}
+@keyframes lv{50%{opacity:.3}}
+#form .mn>.row.sp>.row .bd,#review .mn>.row.sp>.row .bd{padding:7px 14px;font-size:13px}
+#form .mn>.row.sp>.row .bd::before,#review .mn>.row.sp>.row .bd::before{display:none}
+#form .mn>.row.sp>.row .bd.b,#review .mn>.row.sp>.row .bd.b{background:var(--tx);color:var(--bg)}
+#review div[style="flex:1"]:not(.card){border:1px solid var(--bd);border-radius:12px;padding:8px;background:var(--sf)}
+#review div[style="flex:1"]:not(.card)>div:first-child{border-radius:8px;background:linear-gradient(135deg,#FFD9C7,#FFB894)!important}
+#review div[style="flex:1"]:not(.card):nth-child(3n+2)>div:first-child{background:linear-gradient(135deg,#D6E6FF,#A9C8FF)!important}
+#review div[style="flex:1"]:not(.card):nth-child(3n)>div:first-child{background:linear-gradient(135deg,#D4F2E2,#A6DFC2)!important}
+#review div[style="flex:1"]:not(.card) .bd{background:var(--pr);color:var(--on)}#review div[style="flex:1"]:not(.card) .bd::before{display:none}
+#monitoring h1~.mt{font-size:14px;font-weight:700;color:var(--pr)}
+#upload .app,#konfirmasi .app{background:rgba(22,28,45,.55)!important}
+#upload .card,#konfirmasi .card{box-shadow:0 24px 60px rgba(16,24,40,.35)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#rbinfo{display:none!important}
+#gate{position:fixed;inset:0;z-index:40;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:auto;padding:calc(24px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px))}
+#gate .box{max-width:900px;width:100%}
+.gb{display:flex;align-items:center;font-size:17px;font-weight:800;margin-bottom:32px}
+.gb::before{content:"";width:18px;height:18px;margin-right:9px;background:var(--pr);clip-path:polygon(58% 0,12% 56%,44% 56%,34% 100%,88% 40%,56% 40%)}
+.gcs{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+.gc{flex:1 1 240px;text-align:left;background:var(--sf);color:var(--tx);border:1px solid var(--bd);border-radius:14px;padding:22px;cursor:pointer;min-height:44px;box-shadow:0 1px 2px rgba(16,24,40,.05)}
+.gc:hover{border-color:var(--pr)}
+.gc b{display:block;font-size:17px;font-weight:800}
+.gc span{display:block;color:var(--mu);font-size:13px;margin-top:6px}
+.gc span:first-of-type{color:var(--pr);font-weight:700}
+.mn>p.mt[title]{cursor:pointer}.mn>p.mt[title]:hover{text-decoration:underline}
+#md{position:fixed;inset:0;z-index:60;background:rgba(22,28,45,.55);display:flex;align-items:center;justify-content:center;padding:16px}
+#md[hidden]{display:none}
+.mdb{background:var(--sf);color:var(--tx);border-radius:14px;padding:22px;width:100%;max-width:520px;max-height:90vh;overflow:auto;box-shadow:0 24px 60px rgba(16,24,40,.35)}
+.mdb h2{margin:0 0 10px;font-size:18px;font-weight:800}
+.mdb label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:var(--mu);margin-top:12px}
+.mdb .in,.mdb textarea{width:100%;height:auto;min-height:42px;border:1px solid var(--bd3);border-radius:10px;padding:10px;background:var(--sf);color:var(--tx);font-size:14px}
+#mer{color:var(--rtx);font-size:13px;margin:10px 0 0}
+#mft{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.lr{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--bd2)}
+.sg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px}
+.sg label{display:flex;flex-direction:column;gap:6px;font-size:12px;font-weight:600;color:var(--mu)}
+.sg .in{width:100%}.fe{color:var(--rtx);font-size:12px;font-weight:500}
+.in.e,.in.e:focus{border-color:var(--rtx)}
+#bc{margin-left:6px}
+@media (max-width:900px){.scr{overflow-x:visible}.app{width:100%!important;flex-direction:column}.sb{width:100%!important;display:flex;gap:6px;overflow-x:auto;padding:10px 12px}.sb b{margin:0 10px 0 0;white-space:nowrap}.sb p{white-space:nowrap;margin:0}.mn{padding:16px}.row{flex-wrap:wrap}.mn .row[style*="flex-start"]>*{width:100%!important;flex:1 1 100%!important}.row>.card{flex:1 1 150px!important}.card{overflow-x:auto}.sg{grid-template-columns:1fr 1fr}.sg label:first-child{grid-column:1/-1}.top{padding:10px 12px}#review div[style="flex:1"]:not(.card){min-width:130px}#gate .gc{flex-basis:100%}}
+</style></head><body>
+<div class="top" style="justify-content:space-between"><span style="margin:0">Wireframe · Atur Flash Sale · data contoh</span><label style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mu)">Masuk sebagai<select id="rolesel" class="in" aria-label="Ganti akses" style="width:230px"><option value="staff">Marketing Staff (Rina)</option><option value="lead">Marketing Lead (Sari)</option><option value="admin">Admin / Developer (Budi)</option></select></label></div>
+<div id="gate"><div class="box"><b class="gb">Admin ABC</b><h1>Pilih akses untuk masuk</h1><p style="color:var(--mu);margin:8px 0 0">Tampilan dan aksi yang tersedia mengikuti peran. Kamu bisa menggantinya kapan saja dari pojok kanan atas.</p>
+<div class="gcs"><button class="gc" data-r="staff"><b>Marketing Staff</b><span>Rina</span><span>Membuat dan mengedit draft, mengajukan approval.</span></button><button class="gc" data-r="lead"><b>Marketing Lead</b><span>Sari</span><span>Semua akses Staff, plus menyetujui diskon di atas 50% serta mengubah dan mengakhiri jadwal yang berjalan.</span></button><button class="gc" data-r="admin"><b>Admin / Developer</b><span>Budi</span><span>Hanya melihat jadwal, riwayat perubahan, dan log sistem.</span></button></div></div></div>
+<p id="rbinfo" style="margin:0;padding:8px 16px;background:var(--ybg);color:var(--ytx);font:13px Inter,Arial,sans-serif"></p>
+<section class="scr" id="daftar">
+<div class="app" style="min-height:700px">
+<div class="sb"><b>Admin ABC</b><p>Dashboard</p><p>Produk</p><p>Voucher</p><p class="on">Atur Flash Sale</p><p>Laporan</p></div>
+<div class="mn">
+<div class="row sp"><div><h1>Atur Flash Sale</h1><p class="sub">Kelola jadwal yang tampil di section Flash Sale pada Home</p></div><button class="btn">+ Buat Jadwal</button></div>
+<p class="mt" style="margin:20px 0 8px">Slot di Home (1 berlangsung + 3 mendatang)</p>
+<div class="row" style="align-items:stretch">
+<div class="card" style="flex:1"><b>Berlangsung</b><p class="mt">23 Nov 2026 · 00.00</p><span class="bd g">Terisi 6/6</span></div>
+<div class="card" style="flex:1"><b>Besok</b><p class="mt">24 Nov 2026 · 00.00</p><span class="bd g">Terisi 6/6</span></div>
+<div class="card" style="flex:1"><b>25 Nov 2026</b><p class="mt">12.00</p><span class="bd y">Belum lengkap 4/6</span></div>
+<div class="card" style="flex:1"><b>26 Nov 2026</b><p class="mt">Belum ada jadwal</p><span class="bd r">Kosong</span> <button class="lk">Isi sekarang</button></div>
+</div>
+<div class="row" style="margin:20px 0 12px"><input class="in" style="width:280px" aria-label="Cari campaign" placeholder="Cari nama campaign"><select class="in" aria-label="Filter status" style="width:180px"><option>Semua status</option></select></div>
+<div class="card" style="padding:4px 16px">
+<table><tr><th>Nama campaign</th><th>Tanggal</th><th>Jam (WIB)</th><th>SKU</th><th>Status</th><th>Terakhir diubah</th><th>Aksi</th></tr>
+<tr><td>Flash Sale Harian 23 Nov</td><td>23 Nov 2026</td><td>00.00–23.59</td><td>6/6</td><td><span class="bd g">Berlangsung</span></td><td class="mt">Rina · 22 Nov, 16.40</td><td><button class="lk">Lihat</button></td></tr>
+<tr><td>Flash Sale Harian 24 Nov</td><td>24 Nov 2026</td><td>00.00–23.59</td><td>6/6</td><td><span class="bd b">Terjadwal</span></td><td class="mt">Dimas · 22 Nov, 11.05</td><td><button class="lk">Edit</button><button class="lk">Duplikat</button></td></tr>
+<tr><td>Flash Sale 25 Nov</td><td>25 Nov 2026</td><td>12.00–23.59</td><td>4/6</td><td><span class="bd n">Draft</span></td><td class="mt">Rina · 23 Nov, 09.12</td><td><button class="lk">Lanjutkan</button></td></tr>
+<tr><td>Flash Sale 12.12</td><td>12 Des 2026</td><td>00.00–23.59</td><td>6/6</td><td><span class="bd y">Menunggu approval</span></td><td class="mt">Dimas · 21 Nov, 14.30</td><td><button class="lk">Lihat</button></td></tr>
+<tr><td>Flash Sale Harian 22 Nov</td><td>22 Nov 2026</td><td>00.00–23.59</td><td>6/6</td><td><span class="bd n">Selesai</span></td><td class="mt">Rina · 20 Nov, 10.20</td><td><button class="lk">Duplikat</button></td></tr>
+</table></div>
+<p class="mt">Contoh data untuk wireframe.</p>
+</div></div>
+</section>
+<section class="scr" id="form">
+<div class="app" style="min-height:800px"><div class="mn">
+<p class="mt" style="margin:0 0 8px">Atur Flash Sale / Buat Jadwal</p>
+<div class="row sp"><h1>Flash Sale 25 Nov</h1><div class="row"><span class="bd g">1 Jadwal selesai</span><span class="bd b">2 Produk (sedang diisi)</span><span class="bd n">3 Review &amp; Publish</span></div></div>
+<div class="card row sp" style="margin:16px 0"><span>25 Nov 2026 · 12.00–23.59 WIB</span><span class="bd g">Tidak ada jadwal bentrok</span><button class="lk">Ubah jadwal</button></div>
+<div class="card">
+<div class="row sp" style="margin-bottom:8px"><div class="row"><b style="font-size:16px">Produk</b><span class="bd g">6/6 SKU</span></div><div class="row"><button class="lk">Unduh template Excel</button><button class="btn s">Upload Excel</button><button class="btn s" disabled>+ Cari SKU</button></div></div>
+<table><tr><th>Produk</th><th>Harga normal</th><th>Stok tersedia</th><th>% Diskon</th><th>Harga promo (otomatis)</th><th>Qty flash sale</th><th>Status</th></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Hand sanitizer 60 ml<br><span class="mt">PROD0001</span></div></div></td><td>Rp50.000</td><td>120</td><td><input class="in" aria-label="Diskon PROD0001" value="20%"></td><td><b>Rp40.000</b></td><td><input class="in " aria-label="Qty PROD0001" value="20"></td><td><span class="bd g">Siap</span></td></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Sneakers pria<br><span class="mt">PROD7718</span></div></div></td><td>Rp189.000</td><td>45</td><td><input class="in" aria-label="Diskon PROD7718" value="10%"></td><td><b>Rp170.100</b></td><td><input class="in " aria-label="Qty PROD7718" value="10"></td><td><span class="bd g">Siap</span></td></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Sandal flip-flop<br><span class="mt">PROD3386</span></div></div></td><td>Rp75.000</td><td>200</td><td><input class="in" aria-label="Diskon PROD3386" value="10%"></td><td><b>Rp67.500</b></td><td><input class="in " aria-label="Qty PROD3386" value="30"></td><td><span class="bd g">Siap</span></td></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Cartridge tinta hitam<br><span class="mt">PROD9803</span></div></div></td><td>Rp250.000</td><td>60</td><td><input class="in" aria-label="Diskon PROD9803" value="70%"></td><td><b>Rp75.000</b></td><td><input class="in " aria-label="Qty PROD9803" value="10"></td><td><span class="bd y">Diskon di atas 50%</span><br><span class="mt">Perlu konfirmasi</span></td></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Sepatu sport pria<br><span class="mt">PROD2344</span></div></div></td><td>Rp399.000</td><td>18</td><td><input class="in" aria-label="Diskon PROD2344" value="80%"></td><td><b>Rp79.800</b></td><td><input class="in " aria-label="Qty PROD2344" value="5"></td><td><span class="bd y">Diskon di atas 50%</span><br><span class="mt">Perlu approval Lead</span></td></tr>
+<tr><td><div class="row"><div class="pic"></div><div>Sabun cair 250 ml<br><span class="mt">PROD3301</span></div></div></td><td>Rp20.000</td><td>25</td><td><input class="in" aria-label="Diskon PROD3301" value="5%"></td><td><b>Rp19.000</b></td><td><input class="in e" aria-label="Qty PROD3301" value="30"></td><td><span class="bd r">Qty melebihi stok</span><br><span class="mt">Maksimal 25</span></td></tr>
+</table></div>
+<div class="row sp" style="margin-top:16px"><span class="mt">Perbaiki 1 baris merah untuk melanjutkan. Harga promo dihitung otomatis. Contoh data.</span><div class="row"><button class="btn s">Kembali</button><button class="btn s">Simpan draft</button><button class="btn" disabled>Lanjut ke review</button></div></div>
+</div></div>
+</section>
+<section class="scr" id="review">
+<div class="app" style="min-height:640px"><div class="mn">
+<p class="mt" style="margin:0 0 8px">Atur Flash Sale / Buat Jadwal</p>
+<div class="row sp"><h1>Flash Sale 25 Nov</h1><div class="row"><span class="bd g">1 Jadwal selesai</span><span class="bd g">2 Produk selesai</span><span class="bd b">3 Review &amp; Publish</span></div></div>
+<div class="row" style="align-items:flex-start;margin-top:16px">
+<div class="card" style="width:400px"><b style="font-size:16px">Checklist validasi</b>
+<table><tr><td>Jadwal tidak bentrok</td><td><span class="bd g">OK</span></td></tr>
+<tr><td>6 SKU lengkap</td><td><span class="bd g">OK</span></td></tr>
+<tr><td>Qty tidak melebihi stok</td><td><span class="bd g">OK</span></td></tr>
+<tr><td>2 SKU diskon di atas 50%</td><td><span class="bd y">Perlu approval Lead</span></td></tr></table>
+<p style="margin:14px 0"><label><input type="checkbox"> Saya sudah memeriksa preview Home</label></p>
+<p class="mt">Diskon tertinggi 80%</p>
+<div class="row" style="margin-top:16px"><button class="btn s">Simpan draft</button><button class="btn" disabled>Ajukan approval</button></div>
+<p class="mt">Tombol aktif setelah preview dicentang.</p></div>
+<div class="card" style="flex:1"><b style="font-size:16px">Preview di Home</b>
+<div class="row" style="margin:12px 0"><span class="bd n">Berlangsung</span><span class="bd n">Besok</span><span class="bd b">25 Nov · 12.00</span><span class="bd n">26 Nov</span></div>
+<div style="background:var(--pr);color:var(--on);border-radius:8px;padding:8px 12px;margin-bottom:12px">Dimulai dalam 01:30:00</div>
+<div class="row" style="align-items:flex-start;font-size:12px">
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Hand sanitizer 60 ml</p><b>Rp40.000</b> <span class="mt"><s>Rp50.000</s></span> <span class="bd r">20%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:17%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Sneakers pria</p><b>Rp170.100</b> <span class="mt"><s>Rp189.000</s></span> <span class="bd r">10%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:22%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Sandal flip-flop</p><b>Rp67.500</b> <span class="mt"><s>Rp75.000</s></span> <span class="bd r">10%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:15%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+</div><div class="row" style="align-items:flex-start;font-size:12px;margin-top:12px">
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Cartridge tinta hitam</p><b>Rp75.000</b> <span class="mt"><s>Rp250.000</s></span> <span class="bd r">70%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:17%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Sepatu sport pria</p><b>Rp79.800</b> <span class="mt"><s>Rp399.000</s></span> <span class="bd r">80%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:28%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+<div style="flex:1"><div style="height:96px;border-radius:8px;background:var(--bd)"></div><p style="margin:6px 0 2px">Sabun cair 250 ml</p><b>Rp19.000</b> <span class="mt"><s>Rp20.000</s></span> <span class="bd r">5%</span><div style="height:6px;border-radius:3px;background:var(--nbg);margin-top:6px"><div style="width:100%;height:6px;border-radius:3px;background:var(--pr)"></div></div></div>
+</div><p class="mt" style="margin-top:12px">Contoh data. Tampilan mengikuti section Flash Sale di Home.</p></div>
+</div></div></div>
+</section>
+<section class="scr" id="upload">
+<div class="app" style="min-height:640px;background:var(--bd)"><div class="mn" style="display:flex;justify-content:center"><div class="card" style="width:860px;align-self:flex-start">
+<div class="row sp"><div><h1 style="font-size:18px">Hasil upload: flash-sale-25nov.xlsx</h1><p class="sub">Belum ada data tersimpan. Periksa dulu sebelum digunakan.</p></div><div class="row"><span class="bd g">3 valid</span><span class="bd y">2 peringatan</span><span class="bd r">1 perlu diperbaiki</span></div></div>
+<table style="margin-top:12px"><tr><th>Baris</th><th>SKU</th><th>% Diskon</th><th>Qty</th><th>Keterangan</th></tr>
+<tr><td>2</td><td>PROD0001</td><td><input class="in " aria-label="Diskon PROD0001" value="20%"></td><td><input class="in " aria-label="Qty PROD0001" value="20"></td><td><span class="bd g">Valid</span></td></tr>
+<tr><td>3</td><td>PROD7718</td><td><input class="in " aria-label="Diskon PROD7718" value="10%"></td><td><input class="in " aria-label="Qty PROD7718" value="10"></td><td><span class="bd g">Valid</span></td></tr>
+<tr><td>4</td><td>PROD3386</td><td><input class="in " aria-label="Diskon PROD3386" value="10%"></td><td><input class="in " aria-label="Qty PROD3386" value="30"></td><td><span class="bd g">Valid</span></td></tr>
+<tr><td>5</td><td>PROD9803</td><td><input class="in " aria-label="Diskon PROD9803" value="70%"></td><td><input class="in " aria-label="Qty PROD9803" value="10"></td><td><span class="bd y">Diskon di atas 50%</span> <span class="mt">perlu konfirmasi</span></td></tr>
+<tr><td>6</td><td>PROD2344</td><td><input class="in " aria-label="Diskon PROD2344" value="80%"></td><td><input class="in " aria-label="Qty PROD2344" value="5"></td><td><span class="bd y">Diskon di atas 50%</span> <span class="mt">perlu approval Lead</span></td></tr>
+<tr><td>7</td><td>PROD3301</td><td><input class="in e" aria-label="Diskon PROD3301" value="5%"></td><td><input class="in e" aria-label="Qty PROD3301" value="30"></td><td><span class="bd r">Qty 30 melebihi stok (25)</span> <span class="mt">ubah qty di sini</span></td></tr>
+</table>
+<div class="row sp" style="margin-top:16px"><button class="lk">Unduh template Excel</button><div class="row"><button class="btn s">Upload ulang</button><button class="btn" disabled>Gunakan semua baris</button></div></div>
+<p class="mt" style="text-align:right">Tombol aktif setelah baris merah diperbaiki. Contoh data.</p>
+</div></div></div>
+</section>
+<section class="scr" id="konfirmasi">
+<div class="app" style="min-height:560px;background:var(--bd)"><div class="mn" style="display:flex;justify-content:center"><div class="card" style="width:520px;align-self:center">
+<h1 style="font-size:18px">Ajukan approval Flash Sale 25 Nov?</h1>
+<table style="margin:12px 0"><tr><td class="mt">Jadwal</td><td>25 Nov 2026 · 12.00–23.59 WIB</td></tr>
+<tr><td class="mt">Produk</td><td>6 SKU · total stok flash sale 100 unit</td></tr>
+<tr><td class="mt">Diskon tertinggi</td><td>80% (PROD2344)</td></tr></table>
+<div style="background:var(--ybg);color:var(--ytx);border-radius:8px;padding:12px">2 SKU berdiskon di atas 50% akan dikirim ke Marketing Lead. Jadwal belum tayang di Home sebelum disetujui.</div>
+<div class="row" style="justify-content:flex-end;margin-top:16px"><button class="btn s">Batal</button><button class="btn">Ya, ajukan approval</button></div>
+</div></div></div>
+</section>
+<section class="scr" id="monitoring">
+<div class="app" style="min-height:640px"><div class="mn">
+<p class="mt" style="margin:0 0 8px">Atur Flash Sale / Detail Jadwal</p>
+<div class="row sp"><div class="row"><h1>Flash Sale Harian 23 Nov</h1><span class="bd g">Berlangsung</span><span class="mt">Berakhir dalam 08:40:24 · 00.00–23.59 WIB</span></div><button class="btn s">Akhiri lebih awal</button></div>
+<div class="row" style="margin:16px 0 12px"><span class="bd b">Ringkasan</span><span class="bd n">Riwayat perubahan</span></div>
+<div class="row" style="align-items:flex-start">
+<div class="card" style="flex:1;padding:4px 16px"><table><tr><th>Produk</th><th>Harga promo</th><th>Qty</th><th>Terjual</th><th>Sisa</th><th>Status</th></tr>
+<tr><td>Hand sanitizer 60 ml<br><span class="mt">PROD0001</span></td><td>Rp40.000</td><td>20</td><td>18</td><td>2</td><td><span class="bd y">Hampir habis</span></td></tr>
+<tr><td>Sneakers pria<br><span class="mt">PROD7718</span></td><td>Rp170.100</td><td>10</td><td>3</td><td>7</td><td><span class="bd g">Tersedia</span></td></tr>
+<tr><td>Sandal flip-flop<br><span class="mt">PROD3386</span></td><td>Rp67.500</td><td>30</td><td>12</td><td>18</td><td><span class="bd g">Tersedia</span></td></tr>
+<tr><td>Cartridge tinta hitam<br><span class="mt">PROD9803</span></td><td>Rp75.000</td><td>10</td><td>10</td><td>0</td><td><span class="bd n">Habis</span></td></tr>
+<tr><td>Sepatu sport pria<br><span class="mt">PROD2344</span></td><td>Rp79.800</td><td>5</td><td>1</td><td>4</td><td><span class="bd g">Tersedia</span></td></tr>
+<tr><td>Sabun cair 250 ml<br><span class="mt">PROD3301</span></td><td>Rp19.000</td><td>25</td><td>6</td><td>19</td><td><span class="bd g">Tersedia</span></td></tr>
+</table></div>
+<div class="card" style="width:320px"><b>Riwayat perubahan</b>
+<p class="mt">22 Nov, 16.40 · Rina<br>Publish jadwal</p>
+<p class="mt">22 Nov, 16.52 · Sari (Lead)<br>Menyetujui diskon di atas 50%</p>
+<p class="mt" style="margin-top:16px">Harga dan diskon terkunci saat berlangsung. Hanya Lead yang dapat menambah qty, dengan alasan wajib. Contoh data.</p></div>
+</div></div></div>
+</section>
+<script>
+const S=[...document.querySelectorAll('.scr')],T=[...document.querySelectorAll('.top:not(.rb) button')];
+function go(id){if(!document.getElementById(id))id='daftar';S.forEach(s=>s.classList.toggle('on',s.id===id));T.forEach(b=>b.setAttribute('aria-current',b.dataset.s===id));try{history.replaceState(null,'','#'+id)}catch(e){}window.scrollTo(0,0)}
+T.forEach(b=>b.onclick=()=>go(b.dataset.s));
+addEventListener('hashchange',()=>go(location.hash.slice(1)));
+const M={'+ Buat Jadwal':'form','Isi sekarang':'form','Lanjutkan':'form','Upload Excel':'upload','Lanjut ke review':'review','Ajukan approval':'konfirmasi','Batal':'review','Ya, ajukan approval':'daftar','Gunakan semua baris':'form','Kembali':'daftar','Publish':'konfirmasi','Ya, publish':'daftar','Tinjau & setujui':'review'};
+document.addEventListener('click',e=>{const b=e.target.closest('.scr button');if(!b||b.disabled||b.classList.contains('lock'))return;const t=b.textContent.trim();if(t==='Lihat'&&b.closest('tr')===b.closest('table').rows[1])return go('monitoring');if(document.body.dataset.role==='admin')return;if(M[t])go(M[t])});
+function fix(sec,btnText){const q=document.querySelector('#'+sec+' input[aria-label="Qty PROD3301"]'),b=[...document.querySelectorAll('#'+sec+' button')].find(x=>x.textContent.trim()===btnText),c=q.closest('tr').lastElementChild;
+const f=()=>{const v=+q.value,ok=v>=1&&v<=25;q.classList.toggle('e',!ok);b.disabled=!ok;if(sec==='form')c.innerHTML=ok?'<span class="bd g">Siap</span>':'<span class="bd r">Qty melebihi stok</span><br><span class="mt">Maksimal 25</span>';else c.innerHTML=ok?'<span class="bd g">Valid</span>':'<span class="bd r">Qty '+v+' melebihi stok (25)</span>'};q.addEventListener('input',f)}
+fix('form','Lanjut ke review');fix('upload','Gunakan semua baris');
+const cb=document.querySelector('#review input[type=checkbox]'),ab=[...document.querySelectorAll('#review button')].find(x=>x.textContent.trim()==='Ajukan approval');
+cb.onchange=()=>{ab.disabled=!cb.checked};
+const R={staff:['Rina','Marketing Staff','Bisa membuat dan mengedit draft serta mengajukan approval. Diskon di atas 50% harus disetujui Lead, dan jadwal yang berjalan tidak bisa diubah.'],lead:['Sari','Marketing Lead','Semua akses Staff, plus menyetujui dan publish diskon di atas 50%, menambah qty, dan mengakhiri jadwal yang berjalan.'],admin:['Budi','Admin / Developer','Hanya lihat jadwal, riwayat perubahan, dan log sistem. Tidak bisa membuat atau mengubah jadwal.']};
+const q1=(sel)=>document.querySelector(sel),all=(sel)=>[...document.querySelectorAll(sel)];
+const txt=(sec,t)=>all('#'+sec+' button').find(x=>x.textContent.trim()===t);
+const endb=txt('monitoring','Akhiri lebih awal'),okb=txt('konfirmasi','Ya, ajukan approval'),ttl=q1('#konfirmasi h1'),warn=q1('#konfirmasi div[style*="--ybg"]'),rv=all('#review .bd.y')[0],ap=q1('#daftar table').rows[4].querySelector('button');
+const w=document.createElement('div');w.className='row';endb.replaceWith(w);w.insertAdjacentHTML('beforeend','<button class="btn s only-lead">Tambah qty</button>');w.append(endb);
+q1('#monitoring .card[style*="width:320px"]').insertAdjacentHTML('beforeend','<p class="mt only-admin">23 Nov, 00.00 · Sistem<br>Jadwal tayang otomatis</p><p class="mt only-admin">23 Nov, 11.32 · Sistem<br>PROD9803 habis, status diperbarui</p>');
+function role(r){const [n,l,d]=R[r],a=r==='admin';document.body.dataset.role=r;
+all('.rb button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.r===r));
+q1('#rbinfo').textContent='Masuk sebagai '+n+' ('+l+'). '+d;
+all('.scr button').forEach(b=>b.classList.toggle('lock',a&&b!==q1('#daftar table').rows[1].querySelector('button')));
+endb.classList.toggle('lock',r!=='lead');endb.textContent=r==='lead'?'Akhiri lebih awal':'Akhiri lebih awal (Lead)';
+all('.scr input').forEach(i=>i.readOnly=a);q1('#review input[type=checkbox]').disabled=a;
+const L=r==='lead';ap.textContent=L?'Tinjau & setujui':'Lihat';
+txt('review','Ajukan approval')?.remove;ab.textContent=L?'Publish':'Ajukan approval';
+rv.textContent=L?'Bisa disetujui Lead':'Perlu approval Lead';
+ttl.textContent=L?'Publish Flash Sale 25 Nov?':'Ajukan approval Flash Sale 25 Nov?';
+warn.textContent=L?'2 SKU berdiskon di atas 50% dipublish atas persetujuan Anda sebagai Lead. Jadwal tayang otomatis pada jam mulai.':'2 SKU berdiskon di atas 50% akan dikirim ke Marketing Lead. Jadwal belum tayang di Home sebelum disetujui.';
+okb.textContent=L?'Ya, publish':'Ya, ajukan approval'}
+all('.rb button').forEach(b=>b.onclick=()=>role(b.dataset.r));
+role('staff');
+
+
+document.body.insertAdjacentHTML('beforeend','<div id="toast" role="status" style="position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);padding:12px 18px;border-radius:10px;font:600 13px Inter,Arial,sans-serif;display:none;z-index:70;max-width:92vw"></div><div id="md" hidden><div class="mdb" role="dialog" aria-modal="true" aria-labelledby="mtl"><h2 id="mtl"></h2><div id="mbd"></div><p id="mer" role="alert"></p><div id="mft"></div></div></div>');
+let tt;function toast(m,bad){const t=q1('#toast');t.textContent=m;t.style.background=bad?'var(--rtx)':'var(--tx)';t.style.color=bad?'var(--rbg)':'var(--bg)';t.style.display='block';clearTimeout(tt);tt=setTimeout(()=>t.style.display='none',3800)}
+let cbk;const shut=()=>q1('#md').hidden=true;
+function modal(t,b,ok,fn,o){q1('#mtl').textContent=t;q1('#mbd').innerHTML=b;q1('#mer').textContent='';q1('#mft').innerHTML='<button class="btn s" data-x>'+(ok?'Batal':'Tutup')+'</button>'+(ok?'<button class="btn" data-ok'+(o&&o.bad?' style="background:var(--rtx)"':'')+'>'+ok+'</button>':'');cbk=fn;q1('#md').hidden=false;const i=q1('#mbd input,#mbd textarea');if(i)i.focus()}
+q1('#md').addEventListener('click',e=>{if(e.target.id==='md'||e.target.closest('[data-x]'))return shut();if(e.target.closest('[data-ok]')){const m=cbk&&cbk();if(m)q1('#mer').textContent=m;else shut()}});
+addEventListener('keydown',e=>{if(e.key==='Escape')shut()});
+const MON=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'],f2=n=>String(n).padStart(2,'0'),rp=n=>'Rp'+n.toLocaleString('id-ID');
+const fd=d=>d?(a=>+a[2]+' '+MON[a[1]-1]+' '+a[0])(d.split('-')):'–',tm=t=>(t||'').replace(':','.'),mn=t=>+t.slice(0,2)*60+ +t.slice(3),NOW=900;
+const ROLE=()=>document.body.dataset.role,WHO=()=>R[ROLE()][0],hm=()=>{const d=new Date();return f2(d.getHours())+'.'+f2(d.getMinutes())},stamp=()=>'23 Nov, '+hm();
+const esc=x=>String(x).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]),clone=o=>JSON.parse(JSON.stringify(o));
+/* DATA (dummy) */
+const CAT=[['PROD0001','Hand sanitizer 60 ml',50000,120],['PROD7718','Sneakers pria',189000,45],['PROD3386','Sandal flip-flop',75000,200],['PROD9803','Cartridge tinta hitam',250000,60],['PROD2344','Sepatu sport pria',399000,18],['PROD3301','Sabun cair 250 ml',20000,25],['PROD4410','Tas ransel kanvas',149000,80],['PROD5521','Botol minum 750 ml',65000,150],['PROD6602','Headset bluetooth',299000,40],['PROD7733','Earphone kabel',35000,70],['PROD0404','Kaos polos katun',59000,90,'Nonaktif'],['PROD0505','Topi baseball',45000,0]].map(a=>({k:a[0],n:a[1],pr:a[2],s:a[3],x:a[4]}));
+const cat=k=>CAT.find(x=>x.k===k),P0=q=>[['PROD0001','20%','20'],['PROD7718','10%','10'],['PROD3386','10%','30'],['PROD9803','70%','10'],['PROD2344','80%','5'],['PROD3301','5%',q||'30']].map(a=>({k:a[0],d:a[1],q:a[2]}));
+const mk=(id,n,d,a,z,st,u,w,p)=>({id,n,d,a,z,st,u,w,p});let N=5,W=null,MODE='edit',V={se:0,er:0,wn:0,n:0};
+let SC=[mk(1,'Flash Sale Harian 23 Nov','2026-11-23','00:00','23:59','Berlangsung','Rina','22 Nov, 16.40',P0('25')),mk(2,'Flash Sale Harian 24 Nov','2026-11-24','00:00','23:59','Terjadwal','Dimas','22 Nov, 11.05',[{k:'PROD7733',d:'20%',q:'20'},...P0('25').slice(1)]),mk(3,'Flash Sale 25 Nov','2026-11-25','12:00','23:59','Draft','Rina','23 Nov, 09.12',P0().slice(0,4)),mk(4,'Flash Sale 12.12','2026-12-12','00:00','23:59','Menunggu approval','Dimas','21 Nov, 14.30',P0('25')),mk(5,'Flash Sale Harian 22 Nov','2026-11-22','00:00','23:59','Selesai','Rina','20 Nov, 10.20',P0('25'))];SC[0].o={PROD0001:18,PROD7718:3,PROD3386:12,PROD9803:10,PROD2344:1,PROD3301:6};SC[0].sec=31224;SC[4].o={PROD0001:20,PROD7718:10,PROD3386:27,PROD9803:10,PROD2344:5,PROD3301:25};SC.forEach(x=>x.o=x.o||{});
+let LOG=[...SC.map(x=>({i:x.id,t:x.w,u:x.u,a:'Membuat jadwal "'+x.n+'"'})),{i:1,t:'22 Nov, 16.52',u:'Sari',a:'Menyetujui approval dan publish (diskon di atas 50%)'},{i:2,t:'22 Nov, 11.20',u:'Sari',a:'Menyetujui approval dan publish (status: Menunggu approval → Terjadwal)'},{i:4,t:'21 Nov, 14.35',u:'Dimas',a:'Mengajukan approval (status: Draft → Menunggu approval)'}].reverse(),NT=[];
+const audit=(i,a)=>{LOG.unshift({i,t:stamp(),u:WHO(),a});rLog()},notify=(to,x)=>{NT.unshift({to,x,t:hm(),r:0});bell()};
+const bell=()=>{const n=NT.filter(x=>x.to===ROLE()&&!x.r).length,b=q1('#bc');b.textContent=n;b.hidden=!n};
+/* TOP BAR: notification */
+const lab=q1('.top label'),rg=document.createElement('div');rg.style.cssText='display:flex;gap:12px;align-items:center;flex-wrap:wrap';lab.replaceWith(rg);rg.insertAdjacentHTML('beforeend','<button id="bell">Notifikasi <span id="bc" class="bd r" hidden>0</span></button>');rg.append(lab);
+q1('#bell').onclick=()=>{const L=NT.filter(x=>x.to===ROLE());L.forEach(x=>x.r=1);bell();modal('Notifikasi',L.length?L.map(x=>'<div class="lr"><span>'+esc(x.x)+'</span><span class="mt">'+x.t+'</span></div>').join(''):'<p class="mt">Belum ada notifikasi untuk peran ini. Notifikasi muncul saat status approval berubah.</p>')};
+/* VALIDATION */
+const cf=w=>SC.find(x=>x.id!==w.id&&!['Dibatalkan','Selesai'].includes(x.st)&&x.d===w.d&&mn(x.a)<mn(w.z)&&mn(w.a)<mn(x.z));
+function vS(w){const e={};if(!w.n.trim())e.n='Nama campaign wajib diisi';if(!w.d)e.d='Tanggal wajib diisi';else if(w.d<'2026-11-23'||(w.d==='2026-11-23'&&mn(w.a)<=NOW))e.d='Waktu mulai sudah lewat';
+if(!w.a||!w.z)e.z='Jam mulai dan selesai wajib diisi';else if(mn(w.z)<=mn(w.a))e.z='Jam selesai harus setelah jam mulai';
+if(!e.d&&!e.z&&w.d){const o=cf(w);if(o)e.c='Jadwal bentrok dengan "'+o.n+'" ('+fd(o.d)+', '+tm(o.a)+'–'+tm(o.z)+'). Ubah tanggal atau jam mulai/selesai.'}return e}
+function chk(p,L,w,i){const c=cat(p.k),d=Number(String(p.d).replace('%','')),q=Number(p.q),r={s:'g',m:'<span class="bd g">Siap</span>',pm:0,dE:0,qE:0};
+const X=(m,x)=>{r.s='r';r.m='<span class="bd r">'+m+'</span>'+(x?'<br><span class="mt">'+x+'</span>':'');return r};
+if(!c)return X('SKU tidak ditemukan','Periksa kode SKU');if(c.x)return X('SKU nonaktif');if(c.s===0)return X('Stok produk 0');
+if(L.findIndex(y=>y.k===p.k)!==i)return X('SKU duplikat');
+const o=w.d&&w.a&&w.z&&SC.find(x=>x.id!==w.id&&!['Dibatalkan','Selesai'].includes(x.st)&&x.d===w.d&&mn(x.a)<mn(w.z)&&mn(w.a)<mn(x.z)&&x.p.some(y=>y.k===p.k));
+if(o)return X('SKU sudah ada di jadwal lain','"'+o.n+'" pada jam yang beririsan');
+if(!(Number.isInteger(d)&&d>=1&&d<=90)){r.dE=1;return X('Diskon harus 1–90%')}
+r.pm=Math.round(c.pr*(1-d/100));if(r.pm<1||r.pm>=c.pr){r.dE=1;return X('Harga promo tidak valid')}
+if(!(Number.isInteger(q)&&q>=1)){r.qE=1;return X('Qty minimal 1')}if(q>c.s){r.qE=1;return X('Qty melebihi stok','Maksimal '+c.s)}
+if(d>50){r.s='y';r.m='<span class="bd y">Diskon di atas 50%</span><br><span class="mt">Perlu approval Lead</span>'}return r}
+const pmOf=p=>{const c=cat(p.k);return c?Math.round(c.pr*(1-parseFloat(p.d)/100)):0};
+function diff(o,n){const a=[],ch=(l,x,y)=>{if(x!==y)a.push(l+': '+x+' → '+y)};ch('Nama campaign','"'+o.n+'"','"'+n.n+'"');ch('Jadwal',fd(o.d)+', '+tm(o.a)+'–'+tm(o.z),fd(n.d)+', '+tm(n.a)+'–'+tm(n.z));
+n.p.forEach(p=>{const x=o.p.find(y=>y.k===p.k);if(!x)a.push('Tambah SKU '+p.k);else{if(x.d!==p.d)a.push(p.k+' diskon '+x.d+' → '+p.d+' (harga promo '+rp(pmOf(x))+' → '+rp(pmOf(p))+')');if(x.q!==p.q)a.push(p.k+' qty '+x.q+' → '+p.q)}});o.p.forEach(x=>{if(!n.p.find(p=>p.k===x.k))a.push('Hapus SKU '+x.k)});return a}
+function save(){const o=SC.find(x=>x.id===W.id);if(!o){W.u=WHO();W.w=stamp();SC.push(clone(W));audit(W.id,'Membuat draft jadwal "'+(W.n||'tanpa nama')+'"')}else{const d=diff(o,W);if(d.length||o.st!==W.st){d.forEach(x=>audit(W.id,x));W.u=WHO();W.w=stamp();Object.assign(o,clone(W))}}renderList()}
+/* FORM */
+const fcard=q1('#form .mn > .card'),pc=all('#form .mn > .card')[1],pt=pc.querySelector('table'),cnt=pc.querySelector('.bd'),fbtn=t=>all('#form button').find(x=>x.textContent.trim()===t);
+const skb=fbtn('+ Cari SKU'),upb=fbtn('Upload Excel'),svb=fbtn('Simpan draft'),fb=fbtn('Lanjut ke review'),fh=all('#form span.mt').find(x=>x.textContent.startsWith('Perbaiki'));
+skb.disabled=false;fcard.className='card';fcard.style.margin='16px 0';
+fcard.innerHTML='<div class="sg"><label>Nama campaign<input id="fn" class="in" maxlength="60" placeholder="Contoh: Flash Sale 25 Nov"><small id="fne" class="fe"></small></label><label>Tanggal<input id="fd" type="date" class="in"><small id="fde" class="fe"></small></label><label>Jam mulai<input id="fa" type="time" class="in"></label><label>Jam selesai<input id="fz" type="time" class="in"><small id="fze" class="fe"></small></label></div><p id="fcf" role="alert" class="fe" style="margin:12px 0 0"></p><p id="as" class="mt" role="status" style="margin:8px 0 0"></p>';
+function rF(){q1('#fn').value=W.n;q1('#fd').value=W.d;q1('#fa').value=W.a;q1('#fz').value=W.z;q1('#form h1').textContent=W.n||'Jadwal baru';
+pt.innerHTML='<tr><th>Produk</th><th>Harga normal</th><th>Stok tersedia</th><th>% Diskon</th><th>Harga promo (otomatis)</th><th>Qty flash sale</th><th>Status</th><th></th></tr>'+(W.p.map((p,i)=>{const c=cat(p.k);return '<tr><td><div class="row"><div class="pic"></div><div>'+esc(c?c.n:'Produk tidak dikenal')+'<br><span class="mt">'+esc(p.k)+'</span></div></div></td><td>'+(c?rp(c.pr):'–')+'</td><td>'+(c?c.s:'–')+'</td><td><input class="in" data-i="'+i+'" data-f="d" aria-label="Diskon '+esc(p.k)+'" value="'+esc(p.d)+'"></td><td></td><td><input class="in" data-i="'+i+'" data-f="q" aria-label="Qty '+esc(p.k)+'" value="'+esc(p.q)+'"></td><td></td><td><button class="lk" data-a="rm" data-i="'+i+'">Hapus</button></td></tr>'}).join('')||'<tr><td colspan="8" class="mt" style="padding:24px;text-align:center">Belum ada SKU. Tambahkan lewat Cari SKU atau Upload Excel (6 SKU per jadwal).</td></tr>');vF()}
+function vF(){const e=vS(W);[['n','fn'],['d','fd'],['z','fz']].forEach(([k,id])=>{q1('#'+id+'e').textContent=e[k]||'';q1('#'+id).classList.toggle('e',!!(e[k]||(e.c&&k!=='n')))});q1('#fa').classList.toggle('e',!!e.c);q1('#fcf').textContent=e.c||'';
+let er=0,wn=0;W.p.forEach((p,i)=>{const r=chk(p,W.p,W,i),tr=pt.rows[i+1],ins=tr.querySelectorAll('input');tr.cells[4].innerHTML='<b>'+(r.pm?rp(r.pm):'–')+'</b>';tr.cells[6].innerHTML=r.m;ins[0].classList.toggle('e',!!r.dE);ins[1].classList.toggle('e',!!r.qE);if(r.s==='r')er++;if(r.s==='y')wn++});
+V={se:Object.keys(e).length,er,wn,n:W.p.length};cnt.className='bd '+(V.n===6?'g':'y');cnt.textContent=V.n+'/6 SKU';skb.disabled=V.n>=6;fb.disabled=!!(V.se||V.er);
+fh.textContent=(V.se||V.er?'Perbaiki isian bertanda merah untuk melanjutkan. ':'Semua isian valid. ')+'Harga promo dihitung otomatis. Contoh data.';sR()}
+let at;function touch(){vF();const a=q1('#as');if(W.st!=='Draft'){a.textContent='Perubahan belum disimpan';return}a.textContent='Menyimpan…';clearTimeout(at);at=setTimeout(()=>{save();a.textContent='Draft tersimpan otomatis · '+hm()},700)}
+function fInit(){rF();svb.textContent=W.st==='Draft'?'Simpan draft':'Simpan perubahan';fb.hidden=W.st!=='Draft';q1('#as').textContent=W.st==='Draft'?'Perubahan tersimpan otomatis sebagai draft':'Perubahan belum disimpan';go('form')}
+q1('#form').addEventListener('input',e=>{const t=e.target,m={fn:'n',fd:'d',fa:'a',fz:'z'};if(t.dataset.f){W.p[+t.dataset.i][t.dataset.f]=t.value;touch()}else if(m[t.id]){W[m[t.id]]=t.value;if(t.id==='fn')q1('#form h1').textContent=t.value||'Jadwal baru';touch()}});
+q1('#form').addEventListener('click',e=>{const b=e.target.closest('button[data-a="rm"]');if(b){W.p.splice(+b.dataset.i,1);rF();touch()}});
+svb.addEventListener('click',()=>{if(!canEdit(W,ROLE())){toast('Peran ini tidak dapat mengubah jadwal tersebut.',1);return go('daftar')}
+if(W.st==='Draft'){save();toast('Draft disimpan');return go('daftar')}
+if(V.se||V.er||V.n!==6)return toast('Perbaiki isian merah dan lengkapi 6 SKU sebelum menyimpan.',1);
+save();toast('Perubahan disimpan dan tercatat di riwayat');go('daftar')});
+fb.addEventListener('click',()=>{MODE='edit';cb.checked=false;sR()});
+skb.addEventListener('click',()=>{const L=q=>{q=q.trim().toLowerCase();const r=CAT.filter(c=>!q||c.k.toLowerCase().includes(q)||c.n.toLowerCase().includes(q)).slice(0,6);q1('#sl').innerHTML=r.length?r.map(c=>{const i=W.p.findIndex(y=>y.k===c.k),f=c.x?'Nonaktif':c.s===0?'Stok habis':i>=0?'Sudah ditambahkan':V.n>=6?'Maks. 6 SKU':'';return '<div class="lr"><span>'+esc(c.n)+'<br><span class="mt">'+c.k+' · '+rp(c.pr)+' · stok '+c.s+'</span></span>'+(f?'<span class="bd n">'+f+'</span>':'<button class="btn s" data-add="'+c.k+'">Tambah</button>')+'</div>'}).join(''):'<p class="mt">Tidak ada produk yang cocok. Coba kode SKU atau nama produk lain.</p>'};
+modal('Cari SKU','<label>Kode SKU atau nama produk<input id="sq" class="in" placeholder="Contoh: PROD0001 atau sepatu"></label><div id="sl" style="margin-top:8px"></div>');L('');
+q1('#sq').oninput=e=>L(e.target.value);q1('#sl').onclick=e=>{const b=e.target.closest('[data-add]');if(!b||V.n>=6)return;W.p.push({k:b.dataset.add,d:'',q:''});rF();touch();L(q1('#sq').value);toast('SKU '+b.dataset.add+' ditambahkan. Isi diskon dan qty.')}});
+all('.lk').filter(x=>x.textContent.trim()==='Unduh template Excel').forEach(b=>b.onclick=()=>toast('Template diunduh (simulasi): kolom SKU, Persentase Diskon, Qty Flash Sale'));
+/* REVIEW + KONFIRMASI */
+const tiles=all('#review div[style="flex:1"]:not(.card)'),rrows=all('#review table')[0].rows,tot=all('#review p.mt').find(x=>x.textContent.startsWith('Diskon tertinggi')),rh=all('#review p.mt').find(x=>x.textContent.startsWith('Tombol aktif')),rsv=all('#review button').find(x=>x.textContent.trim()==='Simpan draft');
+const bad=(el,c,t)=>{el.className='bd '+c;el.textContent=t};
+function sR(){if(!W)return;const r=ROLE(),sum=W.p.reduce((a,p)=>a+(+p.q||0),0),ok=!V.se&&!V.er&&V.n===6,mx=W.p.reduce((a,p)=>(parseFloat(p.d)||0)>a.d?{d:parseFloat(p.d),k:p.k}:a,{d:0,k:'–'}),ro=MODE==='ro';
+q1('#review h1').textContent=W.n||'Jadwal baru';
+tiles.forEach((t,i)=>{const p=W.p[i],c=p&&cat(p.k);t.style.visibility=p&&c?'':'hidden';if(p&&c){t.querySelector('p').textContent=c.n;t.querySelector('b').textContent=pmOf(p)?rp(pmOf(p)):'–';t.querySelector('s').textContent=rp(c.pr);t.querySelector('.bd').textContent=(parseFloat(p.d)||0)+'%'}});
+bad(rrows[0].querySelector('.bd'),V.se?'r':'g',V.se?'Perlu diperbaiki':'OK');rrows[0].cells[0].textContent='Jadwal valid dan tidak bentrok';
+rrows[1].cells[0].textContent='6 SKU lengkap';bad(rrows[1].querySelector('.bd'),V.n===6?'g':'r',V.n===6?'OK':V.n+'/6');
+rrows[2].cells[0].textContent='Diskon dan qty valid';bad(rrows[2].querySelector('.bd'),V.er?'r':'g',V.er?V.er+' baris tidak valid':'OK');
+rrows[3].cells[0].textContent=V.wn+' SKU diskon di atas 50%';bad(rrows[3].querySelector('.bd'),V.wn?'y':'g',V.wn?'Perlu approval Lead':'Tidak ada');
+tot.textContent='Total stok flash sale '+sum+' unit · Diskon tertinggi '+mx.d+'%';
+const L=r==='lead',t=L?(MODE==='rev'?'Setujui & publish':'Publish'):'Ajukan approval';ab.textContent=t;ab.hidden=ro;rsv.hidden=MODE==='rev'||ro;ab.disabled=!cb.checked||!ok||r==='admin';
+rh.textContent=ro?'Menunggu approval Marketing Lead. Jadwal belum tayang di Home.':'Tombol aktif setelah preview dicentang dan semua validasi lolos.';
+ttl.textContent=t+' "'+(W.n||'jadwal')+'"?';okb.textContent=L?(MODE==='rev'?'Ya, setujui & publish':'Ya, publish'):'Ya, ajukan approval';
+warn.textContent=L?(V.wn?V.wn+' SKU berdiskon di atas 50% dipublish atas persetujuan Anda. Jadwal tayang otomatis pada jam mulai.':'Jadwal tayang otomatis pada jam mulai.'):'Jadwal dikirim ke Marketing Lead untuk direview. Jadwal belum tayang di Home sebelum disetujui.';
+const kt=all('#konfirmasi table')[0].rows;kt[0].cells[1].textContent=fd(W.d)+' · '+tm(W.a)+'–'+tm(W.z)+' WIB';kt[1].cells[1].textContent=V.n+' SKU · total stok flash sale '+sum+' unit';kt[2].cells[1].textContent=mx.d+'% ('+mx.k+')'}
+cb.onchange=sR;rsv.addEventListener('click',()=>{save();toast('Draft disimpan');go('daftar')});
+Object.assign(M,{'Setujui & publish':'konfirmasi','Ya, setujui & publish':'daftar','Ajukan approval':'konfirmasi','Publish':'konfirmasi'});
+okb.addEventListener('click',()=>{const r=ROLE();if(!W||r==='admin')return;const pv=W.st,nm=W.n;
+if(r==='staff'){W.st='Menunggu approval';audit(W.id,'Mengajukan approval (status: '+pv+' → Menunggu approval)');notify('lead',WHO()+' mengajukan approval "'+nm+'"');toast('Diajukan ke Marketing Lead. Jadwal belum tayang sebelum disetujui.')}
+else if(MODE==='rev'){W.st='Terjadwal';audit(W.id,'Menyetujui approval dan publish (status: Menunggu approval → Terjadwal)');notify('staff','Jadwal "'+nm+'" disetujui dan terjadwal');toast('Jadwal disetujui dan terjadwal')}
+else{W.st='Terjadwal';audit(W.id,'Publish jadwal (status: '+pv+' → Terjadwal)');notify('staff','Jadwal "'+nm+'" dipublish dan terjadwal');toast('Jadwal dipublish dan terjadwal')}save()});
+/* DAFTAR */
+const dt=q1('#daftar table'),srch=q1('#daftar input[aria-label="Cari campaign"]'),sel=q1('#daftar select'),stc={Berlangsung:'g',Terjadwal:'b',Draft:'n','Menunggu approval':'y',Selesai:'n',Dibatalkan:'r'};
+const acts=s=>{const r=ROLE(),B=(t,k)=>'<button class="lk" data-a="'+k+'" data-i="'+s.id+'">'+t+'</button>',a=[B('Detail','detail')];
+if(r!=='admin'){const L=r==='lead';if(s.st==='Draft')a.push(B('Lanjutkan','edit'));if(s.st==='Terjadwal'&&L)a.push(B('Edit','edit'));if(s.st==='Menunggu approval')a.push(B(L?'Tinjau & setujui':'Tinjau','rev'));if(s.st!=='Berlangsung')a.push(B('Duplikat','dup'));if(s.st==='Terjadwal'&&L)a.push(B('Batalkan','can'))}
+return a.concat(B('Riwayat','log')).join('')};
+function renderList(){const D=['2026-11-23','2026-11-24','2026-11-25','2026-11-26'],T=['Berlangsung','Besok','25 Nov 2026','26 Nov 2026'];
+q1('#daftar .row[style*="stretch"]').innerHTML=D.map((d,i)=>{const s=SC.find(x=>x.d===d&&(i===0||!['Selesai','Dibatalkan'].includes(x.st))),n=s?s.p.length:0;let b='<span class="bd r">Kosong</span>'+(ROLE()==='admin'?'':' <button class="lk" data-a="new" data-d="'+d+'">Isi sekarang</button>'),u='Belum ada jadwal';
+if(s){u=tm(s.a)+' · '+esc(s.n||'(Tanpa nama)');b=s.st==='Berlangsung'||s.st==='Terjadwal'?'<span class="bd '+(n===6?'g':'y')+'">'+(n===6?'Terisi 6/6':'Belum lengkap '+n+'/6')+'</span>':'<span class="bd '+stc[s.st]+'">'+s.st+(s.st==='Draft'?' '+n+'/6':'')+'</span>'}
+return '<div class="card" style="flex:1"><b>'+T[i]+'</b><p class="mt">'+u+'</p>'+b+'</div>'}).join('');
+const v=sel.value;sel.innerHTML=['Semua status','Berlangsung','Terjadwal','Draft','Menunggu approval','Selesai','Dibatalkan'].map(x=>'<option>'+x+'</option>').join('');sel.value=v||'Semua status';
+dt.innerHTML='<tr><th>Nama campaign</th><th>Tanggal</th><th>Jam (WIB)</th><th>SKU</th><th>Status</th><th>Terakhir diubah</th><th>Aksi</th></tr>'+SC.map(s=>'<tr><td>'+esc(s.n||'(Tanpa nama)')+'</td><td>'+fd(s.d)+'</td><td>'+tm(s.a)+'–'+tm(s.z)+'</td><td>'+s.p.length+'/6</td><td><span class="bd '+stc[s.st]+'">'+s.st+'</span></td><td class="mt">'+s.u+' · '+s.w+'</td><td>'+acts(s)+'</td></tr>').join('')+'<tr hidden><td colspan="7" class="mt" style="padding:16px">Tidak ada jadwal yang cocok. Ubah kata kunci atau filter status.</td></tr>';filt()}
+function filt(){const q=srch.value.toLowerCase();let n=0;[...dt.rows].slice(1,-1).forEach(r=>{const ok=(sel.value==='Semua status'||r.cells[4].textContent.trim()===sel.value)&&r.cells[0].textContent.toLowerCase().includes(q);r.hidden=!ok;if(ok)n++});dt.rows[dt.rows.length-1].hidden=n>0}
+srch.addEventListener('input',filt);sel.addEventListener('change',filt);
+const newS=d=>{W={id:++N,n:'',d:d||'',a:'00:00',z:'23:59',st:'Draft',u:WHO(),w:stamp(),p:[]};MODE='edit';fInit()};
+const canEdit=(s,r)=>r!=='admin'&&(s.st==='Draft'||(s.st==='Terjadwal'&&r==='lead'));
+const openEdit=s=>{if(!canEdit(s,ROLE()))return toast('Jadwal yang sudah dipublish hanya dapat diubah oleh Marketing Lead.',1);W=clone(s);MODE='edit';fInit()};
+const openRev=s=>{W=clone(s);MODE=ROLE()==='lead'?'rev':'ro';cb.checked=false;rF();go('review')};
+q1('#daftar .btn').addEventListener('click',()=>newS());
+function dup(s){const n=clone(s);n.id=++N;n.n=(s.n+' (salinan)').slice(0,60);n.st='Draft';n.d='';n.o={};delete n.sec;delete n.by;n.u=WHO();n.w=stamp();SC.push(n);audit(n.id,'Menduplikasi dari "'+s.n+'"');renderList();W=clone(n);MODE='edit';fInit();toast('Draft baru dibuat dari "'+s.n+'". Atur tanggal dan jam sebelum publish.')}
+function cancel(s){if(ROLE()!=='lead'||s.st!=='Terjadwal')return toast('Hanya Marketing Lead yang dapat membatalkan jadwal yang sudah dipublish.',1);modal('Batalkan jadwal "'+s.n+'"?','<p>Jadwal tidak akan tayang dan stok flash sale dilepas. Tindakan ini tercatat di riwayat.</p><label>Alasan pembatalan<textarea id="rs" rows="3"></textarea></label>','Ya, batalkan',()=>{const v=q1('#rs').value.trim();if(!v)return'Alasan pembatalan wajib diisi.';audit(s.id,'Membatalkan jadwal (status: '+s.st+' → Dibatalkan). Alasan: '+v);s.st='Dibatalkan';s.u=WHO();s.w=stamp();renderList();toast('Jadwal dibatalkan')},{bad:1})}
+function showLog(s){const L=LOG.filter(x=>x.i===s.id);modal('Riwayat perubahan · '+s.n,L.length?L.map(x=>'<div class="lr"><span>'+esc(x.a)+'<br><span class="mt">'+x.u+'</span></span><span class="mt">'+x.t+'</span></div>').join(''):'<p class="mt">Belum ada riwayat.</p>')}
+q1('#daftar').addEventListener('click',e=>{const b=e.target.closest('button[data-a]');if(!b)return;e.stopPropagation();const s=SC.find(x=>x.id==b.dataset.i),a=b.dataset.a;
+if(a==='new')newS(b.dataset.d);else if(a==='edit')openEdit(s);else if(a==='dup')dup(s);else if(a==='can')cancel(s);else if(a==='log')showLog(s);else if(a==='detail'){MS=s.id;rMon();go('monitoring')}else if(a==='rev')openRev(s)});
+/* UPLOAD */
+let U=null;const SMP={s1:['soal.xlsx',[['PROD0001','20%','20'],['PROD7718','10%','10'],['PROD3386','10%','30'],['PROD9803','70%','10'],['PROD2344','80%','5'],['PROD3301','5%','30']]],s2:['bermasalah.xlsx',[['PROD4410','15%','10'],['PROD4410','20%','5'],['PROD9999','10%','5'],['PROD5521','95%','10'],['PROD6602','60%','8'],['PROD0404','10%','5']]],s3:['kolom-salah.xlsx',null]};
+const uc=q1('#upload .card');
+function rU(){if(!U){uc.innerHTML='<h1 style="font-size:18px">Upload Excel</h1><p class="sub">Pilih contoh file untuk disimulasikan. Prototype tidak membaca file dari perangkat.</p><div class="row" style="margin:16px 0">'+[['s1','Contoh dari soal (6 SKU)'],['s2','Contoh data bermasalah'],['s3','Contoh kolom tidak sesuai']].map(x=>'<button class="btn s" data-u="'+x[0]+'">'+x[1]+'</button>').join('')+'</div><div class="row sp"><button class="lk" data-u="tpl">Unduh template Excel</button><button class="btn s" data-u="close">Tutup</button></div>';return}
+if(!U.rows){uc.innerHTML='<h1 style="font-size:18px">'+U.f+'</h1><div role="alert" style="background:var(--rbg);color:var(--rtx);border-radius:10px;padding:14px;margin-top:12px"><b>Format file tidak sesuai template</b><br>Kolom ditemukan: SKU, Diskon, Jumlah. Kolom dibutuhkan: SKU, Persentase Diskon, Qty Flash Sale. Tidak ada data yang dimasukkan ke form.</div><div class="row sp" style="margin-top:16px"><button class="lk" data-u="tpl">Unduh template Excel</button><button class="btn" data-u="pick">Pilih file lain</button></div>';return}
+uc.innerHTML='<div class="row sp"><div><h1 style="font-size:18px">Hasil upload: '+U.f+'</h1><p class="sub">Perbaiki baris merah di sini. Data SKU di form akan diganti dengan isi file ini.</p></div><div class="row" id="uc"></div></div><table id="ut" style="margin-top:12px"><tr><th>Baris</th><th>SKU</th><th>% Diskon</th><th>Qty</th><th>Keterangan</th></tr>'+U.rows.map((p,i)=>'<tr><td>'+(i+2)+'</td><td>'+esc(p.k)+'</td><td><input class="in" data-i="'+i+'" data-f="d" aria-label="Diskon baris '+(i+2)+'" value="'+esc(p.d)+'"></td><td><input class="in" data-i="'+i+'" data-f="q" aria-label="Qty baris '+(i+2)+'" value="'+esc(p.q)+'"></td><td></td></tr>').join('')+'</table><div class="row sp" style="margin-top:16px"><button class="btn s" data-u="pick">Pilih file lain</button><button class="btn" id="ub" data-u="apply"></button></div>';uV()}
+function uV(){const c={g:0,y:0,r:0},ut=q1('#ut');U.rows.forEach((p,i)=>{const r=i>=6?{s:'r',m:'<span class="bd r">Melebihi 6 SKU per jadwal</span>',dE:0,qE:0}:chk(p,U.rows,W,i),tr=ut.rows[i+1],ins=tr.querySelectorAll('input');c[r.s]++;tr.cells[4].innerHTML=r.m.replace('Siap','Valid');ins[0].classList.toggle('e',!!r.dE);ins[1].classList.toggle('e',!!r.qE)});
+q1('#uc').innerHTML='<span class="bd g">'+c.g+' valid</span><span class="bd y">'+c.y+' warning</span><span class="bd r">'+c.r+' error</span>';const b=q1('#ub');b.disabled=c.r>0;b.textContent='Gunakan '+U.rows.length+' baris'}
+uc.addEventListener('input',e=>{const t=e.target;if(U&&t.dataset.f){U.rows[+t.dataset.i][t.dataset.f]=t.value;uV()}});
+uc.addEventListener('click',e=>{const b=e.target.closest('[data-u]');if(!b||b.disabled)return;const k=b.dataset.u;
+if(SMP[k]){U={f:SMP[k][0],rows:SMP[k][1]&&SMP[k][1].map(a=>({k:a[0],d:a[1],q:a[2]}))};rU()}else if(k==='pick'){U=null;rU()}else if(k==='tpl')toast('Template diunduh (simulasi): kolom SKU, Persentase Diskon, Qty Flash Sale');else if(k==='close')go('form');
+else if(k==='apply'){W.p=U.rows.map(x=>({k:x.k,d:x.d,q:x.q}));const n=W.p.length;U=null;rF();touch();go('form');toast(n+' SKU dimasukkan ke form')}});
+upb.addEventListener('click',()=>{U=null;rU()});
+/* MONITORING (per jadwal) */
+let MS=1;const mt=q1('#monitoring table'),cd=all('#monitoring span.mt')[0],hs=q1('#monitoring h1+.bd'),rl=q1('#monitoring .card[style*="width:320px"]'),addb=q1('#monitoring .only-lead');
+q1('#monitoring .row[style*="margin:16px 0 12px"]').outerHTML='<p style="margin:16px 0 12px;padding:10px 14px;border-radius:10px;background:var(--ybg);color:var(--ytx);font-size:13px"><b>Data simulasi.</b> Angka terjual dan sisa stok pada prototype ini bukan data penjualan nyata.</p>';
+const stt=n=>n===0?'<span class="bd n">Habis</span>':n<=2?'<span class="bd y">Hampir habis</span>':'<span class="bd g">Tersedia</span>';
+const cdt=s=>s.st==='Berlangsung'?'Berakhir dalam '+f2(s.sec/3600|0)+':'+f2(s.sec/60%60|0)+':'+f2(s.sec%60)+' · '+tm(s.a)+'–'+tm(s.z)+' WIB':s.st==='Selesai'?'Selesai'+(s.by?' · diakhiri lebih awal oleh '+s.by:''):s.st==='Dibatalkan'?'Dibatalkan':'Mulai '+fd(s.d)+', '+tm(s.a)+' WIB';
+function rMon(){const s=SC.find(x=>x.id===MS);if(!s)return;q1('#monitoring h1').textContent=s.n||'(Tanpa nama)';bad(hs,stc[s.st],s.st);cd.textContent=cdt(s);const run=s.st==='Berlangsung'||s.st==='Selesai';
+mt.innerHTML='<tr><th>Produk</th><th>Harga promo</th><th>Qty flash sale</th><th>Terjual</th><th>Sisa flash sale</th><th>Stok tersedia</th><th>Status</th></tr>'+(s.p.map(p=>{const c=cat(p.k),q=+p.q||0,so=(s.o||{})[p.k]||0,sisa=q-so;return '<tr><td>'+esc(c?c.n:p.k)+'<br><span class="mt">'+esc(p.k)+'</span></td><td>'+(pmOf(p)?rp(pmOf(p)):'–')+'</td><td>'+q+'</td><td>'+so+'</td><td>'+sisa+'</td><td>'+(c?c.s:'–')+'</td><td>'+(run?stt(sisa):'<span class="bd n">'+(s.st==='Dibatalkan'?'Dibatalkan':'Belum tayang')+'</span>')+'</td></tr>'}).join('')||'<tr><td colspan="7" class="mt" style="padding:24px;text-align:center">Belum ada SKU pada jadwal ini.</td></tr>');
+const L=ROLE()==='lead'&&s.st==='Berlangsung';endb.hidden=s.st!=='Berlangsung';endb.classList.toggle('lock',!L);endb.textContent=L?'Akhiri lebih awal':'Akhiri lebih awal (Lead)';addb.hidden=s.st!=='Berlangsung';rLog()}
+function rLog(){const s=SC.find(x=>x.id===MS);if(!s)return;const L=LOG.filter(x=>x.i===MS).slice(0,5);rl.innerHTML='<b>Riwayat perubahan</b>'+(L.length?L.map(x=>'<p class="mt">'+x.t+' · '+x.u+'<br>'+esc(x.a)+'</p>').join(''):'<p class="mt">Belum ada riwayat.</p>')+'<button class="lk" id="la">Lihat semua</button>'+(s.st==='Berlangsung'?'<p class="mt">Harga dan diskon terkunci saat berlangsung. Hanya Lead yang dapat menambah qty, dengan alasan wajib.</p>':'');q1('#la').onclick=()=>showLog(s)}
+setInterval(()=>{SC.forEach(s=>{if(s.st==='Berlangsung'&&s.sec>0)s.sec--});const s=SC.find(x=>x.id===MS);if(s&&s.st==='Berlangsung')cd.textContent=cdt(s)},1000);
+setInterval(()=>{let ch=0;SC.forEach(s=>{if(s.st!=='Berlangsung')return;const o=s.o=s.o||{},r=s.p.filter(p=>(+p.q||0)-(o[p.k]||0)>0);if(!r.length)return;const p=r[Math.random()*r.length|0];o[p.k]=(o[p.k]||0)+1;if(s.id===MS)ch=1});if(ch&&q1('#monitoring').classList.contains('on'))rMon()},3000);
+addb.onclick=()=>{const s=SC.find(x=>x.id===MS);if(!s||s.st!=='Berlangsung'||ROLE()!=='lead')return;modal('Tambah qty flash sale','<label>SKU<select id="qs" class="in">'+s.p.map((p,i)=>'<option value="'+i+'">'+esc(p.k)+' · '+esc((cat(p.k)||{}).n||'')+'</option>').join('')+'</select></label><label>Tambahan qty<input id="qn" type="number" min="1" class="in" value="1"></label><label>Alasan<textarea id="rs" rows="2"></textarea></label>','Simpan',()=>{const p=s.p[+q1('#qs').value],n=Number(q1('#qn').value),c=cat(p.k),cur=+p.q;
+if(!Number.isInteger(n)||n<1)return'Tambahan qty minimal 1.';if(c&&cur+n>c.s)return'Qty melebihi stok tersedia. Maksimal tambahan '+(c.s-cur)+'.';const v=q1('#rs').value.trim();if(!v)return'Alasan wajib diisi.';
+p.q=String(cur+n);audit(s.id,p.k+' qty '+cur+' → '+(cur+n)+' (tambah '+n+'). Alasan: '+v);s.u=WHO();s.w=stamp();renderList();rMon();toast('Qty '+p.k+' ditambah '+n)})};
+endb.addEventListener('click',()=>{const s=SC.find(x=>x.id===MS);if(!s||s.st!=='Berlangsung'||ROLE()!=='lead')return;modal('Akhiri "'+s.n+'" lebih awal?','<p>Flash sale langsung berhenti tayang di Home dan tidak bisa diaktifkan kembali. Tindakan ini tercatat di riwayat.</p><label>Alasan mengakhiri<textarea id="rs" rows="3"></textarea></label>','Ya, akhiri',()=>{const v=q1('#rs').value.trim();if(!v)return'Alasan wajib diisi.';audit(s.id,'Mengakhiri jadwal lebih awal (status: Berlangsung → Selesai). Alasan: '+v);s.st='Selesai';s.by=WHO();s.u=WHO();s.w=stamp();renderList();rMon();toast('Jadwal diakhiri lebih awal')},{bad:1})});
+/* GLOBAL */
+document.addEventListener('click',e=>{if(e.target.closest('.sb p:not(.on)'))toast('Menu ini di luar scope prototype Atur Flash Sale')});
+const _role=role;role=function(r){_role(r);q1('#rolesel').value=r;const on=id=>q1('#'+id).classList.contains('on');
+if(W&&((on('form')||on('upload'))&&!canEdit(W,r)||on('review')&&MODE==='edit'&&!canEdit(W,r))){go('daftar');toast('Peran ini tidak dapat mengubah jadwal tersebut.',1)}
+if(W&&MODE==='rev'&&r!=='lead')MODE='ro';renderList();bell();rMon();sR()};
+W=clone(SC[2]);rF();rMon();role(document.body.dataset.role);
+['form','review','monitoring'].forEach(id=>q1('#'+id+' .app').prepend(q1('#daftar .sb').cloneNode(true)));
+
+const gate=q1('#gate'),rsel=q1('#rolesel');
+all('#gate .gc').forEach(b=>b.onclick=()=>{role(b.dataset.r);gate.style.display='none';go('daftar')});
+rsel.onchange=()=>role(rsel.value);
+all('.sb p.on').forEach(p=>{p.style.cursor='pointer';p.onclick=()=>go('daftar')});
+all('.mn > p.mt').filter(p=>p.textContent.startsWith('Atur Flash Sale /')).forEach(p=>{p.title='Kembali ke daftar';p.onclick=()=>go('daftar')});
+const sp=all('#review .mn>.row.sp>.row .bd')[1];sp.style.cursor='pointer';sp.title='Kembali ke produk';sp.onclick=()=>go('form');
+q1('#upload .app').onclick=e=>{if(e.target===e.currentTarget||e.target.classList.contains('mn'))go('form')};
+q1('#konfirmasi .app').onclick=e=>{if(e.target===e.currentTarget||e.target.classList.contains('mn'))go('review')};
+go(location.hash.slice(1));
+</script></body></html>
